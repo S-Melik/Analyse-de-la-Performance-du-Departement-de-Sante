@@ -1,5 +1,5 @@
 
-# Pipeline de Données et Création de Tableau de Bord
+# Report 2023
 
 ## Description
 Ce projet implique la génération de données synthétiques, leur nettoyage, et la création de tableaux de bord avec Power BI. De plus, il automatise le processus d'extraction et de nettoyage des données.
