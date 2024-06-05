@@ -19,9 +19,10 @@ Le projet suit ces étapes :
 3. **Analyse des Données** :
    - Plusieurs questions clés ont été répondues sur la base des données préparées :
      - Quel est le nombre total de déclarations en 2023 ?
-     - Quelle est la somme des coûts engagés en 2023 ?
-     - Quel est le coût moyen par déclaration ?
-     - Quel est le total des coûts engagés par mois ?
+     - Quelle est la somme des frais engagés en 2023 ?
+     - Quel est le frais moyen par déclaration ?
+     - Quel est le total des frais engagés par mois ?
+     - etc ...
 
 4. **Visualisation des Données** :
    - Les résultats de l'analyse ont été visualisés dans un rapport Power BI, `Report2023.pbix`.
