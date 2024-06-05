@@ -30,8 +30,6 @@ print(f"Data extracted and saved to {csv_file_path}")
 
 # ----------------------------------------------------------------------------------------------------------------------------------------
 
-import pandas as pd
-
 # Load data from the extracted CSV file
 df = pd.read_csv('extracted_data2024.csv')
 
