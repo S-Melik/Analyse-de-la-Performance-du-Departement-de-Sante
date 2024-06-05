@@ -1,25 +1,42 @@
 
-# Report 2023
+# Analyse de la Performance du Département de Santé
 
-## Description
-Ce projet implique la génération de données synthétiques, leur nettoyage, et la création de tableaux de bord avec Power BI. De plus, il automatise le processus d'extraction et de nettoyage des données.
+Ce projet analyse la performance du département de santé dans une compagnie d'assurance pour l'année 2023. En raison du manque de données publiques appropriées, des données synthétiques ont été générées pour créer un ensemble de données réaliste.
 
-## Table des Matières
-- [Description](#description)
-- [Fichiers](#fichiers)
-- [Technologies](#technologies)
-- [Installation et Utilisation](#installation-et-utilisation)
-- [Flux de Travail du Projet](#flux-de-travail-du-projet)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
+## Vue d'Ensemble du Projet
 
-## Fichiers
-- `GenData2023.py`: Script pour générer des données synthétiques.
-- `data_table2023.csv`: Données synthétiques générées.
-- `Data_Cleaning.sql`: Script SQL pour le nettoyage des données (suppression des doublons, standardisation des données).
-- `DT_prepared.csv`: Données nettoyées téléchargées depuis le serveur MySQL.
-- `Report2023.pbix`: Rapport Power BI créé à partir de `DT_prepared.csv`.
-- `Extract.py`: Script pour automatiser l'extraction et le nettoyage des données.
+Le projet suit ces étapes :
+
+1. **Génération de Données** :
+   - Les données synthétiques ont été générées à l'aide de `GenData2023.py`.
+   - Les données générées sont stockées dans `data_table2023.csv`.
+
+2. **Préparation des Données** :
+   - Le fichier CSV a été téléchargé dans une base de données MySQL.
+   - Le nettoyage et la préparation des données ont été effectués en utilisant SQL, avec le code disponible dans `DATA CLEANING.sql`.
+   - Les données nettoyées ont été téléchargées sous forme de `DT_prepared.csv`.
+
+3. **Analyse des Données** :
+   - Plusieurs questions clés ont été répondues sur la base des données préparées :
+     - Quel est le nombre total de déclarations en 2023 ?
+     - Quelle est la somme des coûts engagés en 2023 ?
+     - Quel est le coût moyen par déclaration ?
+     - Quel est le total des coûts engagés par mois ?
+
+4. **Visualisation des Données** :
+   - Les résultats de l'analyse ont été visualisés dans un rapport Power BI, `Report2023.pbix`.
+
+5. **Automatisation** :
+   - Le script Python `Extract.py` automatise les étapes de génération et de préparation des données.
+
+## Structure du Projet
+
+- `GenData2023.py` : Script pour générer des données synthétiques.
+- `data_table2023.csv` : Données synthétiques générées.
+- `DATA CLEANING.sql` : Script SQL pour le nettoyage et la préparation des données.
+- `DT_prepared.csv` : Données nettoyées et préparées.
+- `Report2023.pbix` : Rapport Power BI pour la visualisation des données.
+- `Extract.py` : Script Python pour automatiser la génération et la préparation des données.
 
 ## Technologies
 - Python
@@ -29,33 +46,53 @@ Ce projet implique la génération de données synthétiques, leur nettoyage, et
 
 ## Installation et Utilisation
 
-### Générer des Données Synthétiques
-```bash
-python GenData2023.py
-```
+### Prérequis
 
-### Nettoyer les Données
-1. Charger `Data_Cleaning.sql` dans votre serveur MySQL et l'exécuter pour nettoyer `data_table2023.csv`.
-2. Télécharger les données nettoyées sous forme de `DT_prepared.csv`.
+- Python 3.x
+- Serveur MySQL
+- Power BI Desktop
 
-### Créer des Tableaux de Bord
-1. Ouvrir `Report2023.pbix` avec Power BI Desktop.
-2. Actualiser les données pour s'assurer qu'elles reflètent bien `DT_prepared.csv`.
+### Installation
 
-### Automatiser l'Extraction et le Nettoyage des Données
-```bash
-python Extract.py
-```
+1. **Cloner le dépôt** :
+    ```sh
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
 
-## Flux de Travail du Projet
-1. Générer des données synthétiques avec `GenData2023.py`.
-2. Nettoyer les données avec `Data_Cleaning.sql`.
-3. Télécharger les données nettoyées sous forme de `DT_prepared.csv`.
-4. Créer des tableaux de bord Power BI avec `DT_prepared.csv` et les enregistrer sous forme de `Report2023.pbix`.
-5. Automatiser l'extraction et le nettoyage avec `Extract.py`.
+2. **Installer les dépendances Python** :
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-## Contribuer
-Les contributions sont les bienvenues ! Veuillez cloner ce dépôt et soumettre des pull requests.
+3. **Exécuter le script de génération de données** :
+    ```sh
+    python GenData2023.py
+    ```
+
+4. **Télécharger le CSV dans MySQL** :
+    - Utilisez votre méthode préférée pour télécharger `data_table2023.csv` dans une base de données MySQL.
+
+5. **Exécuter le script SQL pour nettoyer et préparer les données** :
+    - Exécutez les commandes dans `DATA CLEANING.sql` dans votre base de données MySQL.
+
+6. **Télécharger les données préparées** :
+    - Exportez le résultat sous forme de `DT_prepared.csv`.
+
+7. **Générer le rapport Power BI** :
+    - Ouvrez `Report2023.pbix` dans Power BI Desktop pour voir les visualisations.
+
+### Automatisation
+
+- Pour automatiser les étapes de génération et de préparation des données, exécutez :
+    ```sh
+    python Extract.py
+    ```
+
+## Contributeurs
+
+- Melik Soufiane
 
 ## Licence
-Ce projet est sous licence MIT.
+
+Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
