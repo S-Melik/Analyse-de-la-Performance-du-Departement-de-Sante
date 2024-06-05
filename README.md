@@ -43,7 +43,6 @@ Le projet suit ces étapes :
 - Python
 - SQL
 - Power BI
-- MySQL
 
 ## Installation et Utilisation
 
