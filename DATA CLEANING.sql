@@ -4,11 +4,6 @@
 SELECT * 
 FROM data_table;
 
-SELECT `Declaration`
-FROM data_table
-WHERE Police = '065487956';
-
-
 
 /* 1. Make a Copy of the Data */
 CREATE TABLE datatable_copy
