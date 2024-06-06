@@ -201,4 +201,4 @@ print(code_maladie_per_policy)
 # Save the DataFrame to a CSV file in the current directory
 df.to_csv('data_table2023.csv', index=False)
 
-print("Data generation completed and saved to 'data_table.csv'")
+print("Data generation completed and saved to 'data_table2023.csv'")
